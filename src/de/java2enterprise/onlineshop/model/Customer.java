@@ -45,8 +45,8 @@ public class Customer implements Serializable {
 	private String password;
 
 	//bi-directional many-to-one association to Item
-	@OneToMany(mappedBy="seller")
-	private Set<Item> offers;
+	//@OneToMany(mappedBy="seller")
+	//private Set<Item> offers;
 
 	//bi-directional many-to-one association to Item
 	@OneToMany(mappedBy="buyer")
@@ -79,15 +79,15 @@ public class Customer implements Serializable {
 		this.password = password;
 	}
 
-	public Set<Item> getOffers() {
+	/*public Set<Item> getOffers() {
 		return this.offers;
-	}
+	}*/
 
-	public void setOffers(Set<Item> offers) {
+	/*public void setOffers(Set<Item> offers) {
 		this.offers = offers;
-	}
+	} */
 
-	public Item addOffer(Item offer) {
+	/*public Item addOffer(Item offer) {
 		Set<Item> offers = getOffers();
 		if(offers == null) {
 			offers = new HashSet<Item>();
@@ -96,14 +96,14 @@ public class Customer implements Serializable {
 		offer.setSeller(this);
 
 		return offer;
-	}
+	}  */
 
-	public Item removeOffer(Item offer) {
+	/*public Item removeOffer(Item offer) {
 		getOffers().remove(offer);
 		offer.setSeller(null);
 
 		return offer;
-	}
+	} */
 
 	public Set<Item> getPurchases() {
 		return this.purchases;
